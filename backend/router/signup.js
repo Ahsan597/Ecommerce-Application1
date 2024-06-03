@@ -63,7 +63,7 @@ async function postsignin(req, res){
     }
     else{
       const validPassword = await bcrypt.compare(body.pass, data1.pass);
-      console.log("pass", data1.pass, body.pass)
+      // console.log("pass", data1.pass, body.pass)
       if (!validPassword) {
         res.status(200).send({message: "password is invalid"});
       }

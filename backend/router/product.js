@@ -17,7 +17,7 @@ async function getpro(req, res) {
         console.log(data1)
         res.status(300).send({ data1: data1 })
     } catch (error) {
-        res.status(300).send("am out of route")
+        res.status(300).send(" out of route")
     }
 };
 
@@ -52,20 +52,21 @@ async function getidpro(req, res) {
 
 async function postpro( req, res) {
     try {
-        res.send("image uploaded")
-        let product12 ={};
-            product12.productName= req.body.productName,
-            product12.productPrice= req.body.productPrice,
-            product12.productQuantity= req.body.productQuantity,
+        // res.send("image uploaded")
+        let product ={};
+            product.productName= req.body.productName,
+            product.productPrice= req.body.productPrice,
+            product.productQuantity= req.body.productQuantity
         // productimage: `${req.file.filename}`
 
-            // let data = new Product(product12);
-            product12.save().then((doc) => res.status(201).send(doc))
+            let data = new Product(product);
+            // console.log(data)
+            data.save().then((doc) => res.status(201).send(doc))
             .catch((error)=>{
-            res.send("product error")
+                res.send("product error")
       });
     } catch (error) {
-        res.send("am out of route")
+        res.send("i'm out of route")
     }
 
 };
