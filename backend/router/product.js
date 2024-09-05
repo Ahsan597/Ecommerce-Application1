@@ -1,137 +1,111 @@
 const express = require("express");
 const router = express.Router()
 const multer = require("multer");
+const bodyParser = require('body-parser');
 const path = require("path");
 const Product = require("../Model/Product.js")
+const app = express();
 
 router.get('/getpro', getpro)
-router.get('/getidpro', getidpro)
-router.post('/postpro', postpro)
-router.put('/putpro', putpro)
-router.delete('/deleteidpro', deleteidpro)
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname));
+  },
+});
+
+const upload = multer({ storage: storage });
+
+
+router.get('/getproid/:id', async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    if (!product) {
+      return res.status(404).send({ message: 'Product not found' });
+    }
+    res.send(product);
+  } catch (err) {
+    res.status(500).send("am out of getproid");
+  }
+});
+
 
 async function getpro(req, res) {
-    try {
-        console.log("get working")
-        let data1 = await Product.find()
-        console.log(data1)
-        res.status(300).send({ data1: data1 })
-    } catch (error) {
-        res.status(300).send(" out of route")
-    }
-};
-
-async function getidpro(req, res) {
-    try {
-        console.log("get working")
-        let data1 = await Product.find({ _id: req.query.id })
-        console.log(data1)
-        res.status(300).send({ data1: data1 })
-    } catch (error) {
-        res.status(300).send("am out of route")
-    }
-};
-
-// const storage = multer.diskStorage({
-//     destination: '../Images',
-//     filename: (req, file, cb) => {
-//         return cb(null, `${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
-//     }
-// })
-
-// const upload = multer({
-//     storage: storage,
-    // limits: {
-    //     fileSize: 10
-    // }
-// })
-// router.use('./Images', express.static('/Images'));
-// const shoes = require("../Images")
-
-
-
-async function postpro( req, res) {
-    try {
-        // res.send("image uploaded")
-        let product ={};
-            product.productName= req.body.productName,
-            product.productPrice= req.body.productPrice,
-            product.productQuantity= req.body.productQuantity
-        // productimage: `${req.file.filename}`
-
-            let data = new Product(product);
-            // console.log(data)
-            data.save().then((doc) => res.status(201).send(doc))
-            .catch((error)=>{
-                res.send("product error")
-      });
-    } catch (error) {
-        res.send("i'm out of route")
-    }
-
-};
-
-// function errHandler(err, req, res, next) {
-//     if (err instanceof multer.MulterError) {
-//         res.json({
-//             // success: 0,
-//             message: err.message
-//         })
-//     }
-// }
-
-
-
-// async function postpro(req, res) {
-    // try {
-
-    //     let data2 = {};
-    //     data2.productname = req.body.productname,
-    //     data2.productprice = req.body.productprice,
-    //     data2.productimage = req.body.productimage
-
-    //     console.log(req.body.productimage)
-    //     let data1 = await Product.find()
-    //         let resp = new Product(data2)
-    //         let rss = await resp.save()
-    //         console.log("res", rss)
-    //         res.send({ data1: data1 })
-
-    //     res.status(200).send("on route")
-    // } catch (error) {
-    //     console.log(error)
-    //     res.send({ message: "am out of route", error })
-    // }
-// };
-
-async function putpro(req, res) {
-    try {
-        let data1 = await Product.updateOne({ _id: req.query.id },
-            {
-                $set:
-                {
-                    productname: req.body.productname,
-                    productprice: req.body.productprice,
-                    productimage: req.body.productimage
-                }
-            });
-        let datas = await Product.find()
-        res.status(300).send({ data1: data1 })
-    } catch (error) {
-        res.status(300).send("am out of route")
-    }
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 18;
+  const skip = (page - 1) * limit;
+  try {
+    console.log("getpro working")
+    const products = await Product.find().skip(skip).limit(limit);
+    const total = await Product.countDocuments();
+    res.json({ products, total });
+    // console.log(data1)
+    // res.status(200).send({ data1 })
+  } catch (error) {
+    res.status(400).send(" out of route")
+  }
 };
 
 
-  
-async function deleteidpro(req, res) {
-    try {
-        let data1 = await Product.findByIdAndRemove({ _id: req.query.id })
-        res.status(300).send("on route")
-    } catch (error) {
-        res.status(300).send("am out of route")
+router.post('/postpro', upload.single('productImageurl'), async (req, res) => {
+  try {
+    const { productName, productPrice, productCategory, productBrand } = req.body;
+    const productImageurl = `/uploads/${req.file.filename}`;
+    const product = new Product({ productName, productPrice, productCategory, productBrand, productImageurl });
+    await product.save();
+    res.status(201).send(product);
+  } catch (error) {
+    res.status(400).send("am out of route")
+  }
+});
+
+
+router.put('putpro/:id', upload.single('productImageurl'), async (req, res) => {
+  try {
+    const { productName, productPrice, productCategory, productBrand } = req.body;
+    let product = await Product.findById(req.params.id);
+
+    if (!product) {
+      return res.status(404).send({ message: 'Product not found' });
     }
-};
+
+    // Update fields
+    product.productName = productName || product.productName;
+    product.productPrice = productPrice || product.productPrice;
+    product.productBrand = productBrand || product.productBrand;
+    product.productCategory = productCategory || product.productCategory;
+
+    // Update image if a new one is uploaded
+    if (req.file) {
+      product.productImageurl = `/uploads/${req.file.filename}`;
+    }
+
+    await product.save();
+    res.status(200).send(product);
+  } catch (err) {
+    res.status(500).send("am out of put route");
+  }
+});
+
+
+router.delete('delpro/:id', async (req, res) => {
+  try {
+    const product = await Product.findByIdAndDelete(req.params.id);
+
+    if (!product) {
+      return res.status(404).send({ message: 'Product not found' });
+    }
+
+    res.status(200).send({ message: 'Product deleted successfully' });
+  } catch (err) {
+    res.status(500).send({ error: err.message });
+  }
+});
 
 
 

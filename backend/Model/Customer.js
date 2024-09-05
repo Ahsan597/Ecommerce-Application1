@@ -1,19 +1,22 @@
 const mongoose = require("mongoose");
 
 let CustomerSchema = mongoose.Schema({
-    customername:{
+    customerName:{
         type:String
     },
-    customerphno:{
-        type:String
+    customerPhno:{
+        type:Number
     },
-    customerproduct:{
-        type:String
+    customerGmail:{
+        type: String
     },
-    customerbill:{
-        type:String
-    },
-    customeraddress:{
+    // customerproduct:{
+    //     type:String
+    // },
+    // customerbill:{
+    //     type:String
+    // },
+    customerAddress:{
         type:String
     }
 })

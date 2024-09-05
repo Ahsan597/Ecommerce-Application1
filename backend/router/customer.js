@@ -3,6 +3,7 @@ const router = express.Router();
 // const mongoose = require("mongoose");
 
 const Customer = require("../Model/Customer.js")
+
 router.get('/getcus',getcus)
 router.get('/getidcus', getidcus)
 router.post('/postcus',postcus)
@@ -31,19 +32,11 @@ async function getidcus(req, res) {
 };
 async function postcus(req, res) {
     try {
-        let data2 = {};
-        data2.customername = req.body.customername,
-        data2.customerphno = req.body.customerphno,
-        data2.customeraddres = req.body.customeraddres,
-        data2.customerbill = req.body.customerbill,
-        data2.customerproduct = req.body.customerproduct
+        const {customerName ,customerPhno ,customerGmail, customerAddress} = req.body
+        const customer = new Customer({customerName ,customerPhno ,customerGmail, customerAddress})
+        await customer.save();
+        res.status(201).send(customer);
 
-        let data1 = await Customer.find()
-        let resp = new Customer(data2)
-        let rss = await resp.save()
-        console.log("res", rss)
-        res.send({ data1: data1 })
-        res.status(200).send("on route")
     } catch (error) {
         console.log(error)
         res.send({ message: "am out of route", error })
@@ -72,7 +65,6 @@ async function putcusid(req, res) {
 
 async function deleteidcus(req, res) {
     try {
-
         let data1 = await Customer.findByIdAndRemove({ _id: req.query.id })
         res.status(300).send("on route")
     } catch (error) {
