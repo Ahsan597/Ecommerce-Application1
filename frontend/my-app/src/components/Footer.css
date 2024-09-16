@@ -1,0 +1,46 @@
+/* .mainfoot {
+    position: fixed;
+    z-index: 1000;
+} */
+
+.footer {
+    /* background-color: rgb(158, 228, 89);
+    height: 20vmax;
+    width: 100%; */
+    margin-top: 75vmax;
+   
+}
+
+.copy {
+    font-size: 14px;
+    margin-left: 5vmax;
+}
+
+.footcolor {
+    background-color: rgb(158, 228, 89);
+    height: 14vmax;
+    width: 100%;
+    border-radius: 5vmax 0vmax 5vmax 0vmax; 
+    /* position: fixed; */
+    /* z-index: 900; */
+}
+
+.licap {
+    list-style: none;
+    text-decoration: none;
+    margin-right: 85vmax;
+    margin-top: 0.5vmax;
+    font-weight: bolder;
+    color: black;
+}
+
+.licap3 {
+    margin-left: 50vmax;
+    display: flex;
+    flex-direction: row;
+}
+
+.liicons {
+    list-style: none;
+    margin-left: 4vmax;
+}

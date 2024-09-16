@@ -1,0 +1,57 @@
+/* .orders{
+    margin-top: 7vmax;
+}
+.youracc{
+    margin-top: 5vmax;
+    margin-left: 10vmax;
+}
+.accmanage{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-weight: bolder;
+   
+}
+.acclink{
+    text-decoration: none;
+    width: 20vw;
+    height: 29vh;
+    margin: 4vmax;
+    padding-top: 1vmax;
+    border: 1px solid black;
+    border-radius: 50vmax;
+}
+.acclink:hover{
+    background-color: rgb(223, 241, 226);
+}
+.accountdiv{
+    display: flex;
+    flex-direction: row;
+    margin-left: 7vmax;
+    margin-top: 5vmax;
+}
+.managename{
+    margin: auto;
+    text-align: center;
+
+}
+.manageicon{
+    color: goldenrod;
+    margin-left: 6vmax;
+} */
+
+.profile{
+    /* background-color: rgb(246, 247, 248); */
+    height: 50vh;
+    width: 40%;
+    margin-top: 10vmax;
+    margin-left: 32vmax;
+}
+.profiledata{
+    margin-top: 4vmax;
+    /* margin-left: 30vmax; */
+  
+}
+.textpro{
+    text-align: justify;
+}

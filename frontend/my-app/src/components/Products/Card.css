@@ -1,0 +1,153 @@
+.cardimg{
+    border: 1px solid black;
+     height: 50vh;
+    /* width: 35%; */
+}
+
+.headcontent{
+    margin-top: 6.6vmax;
+    margin-left: 34vmax;
+    font-weight: bolder;
+
+}
+.headcontent1{
+    margin-left: 36vmax;
+    /* margin-top: 8vmax; */
+}
+.productall{
+    margin: auto;
+    align-items: center;
+    text-align: center;  
+}
+.child{
+    margin-right: 4vmax;
+}
+.prodtoy{
+    margin-left: 6.5vmax;
+    color: darkgreen;
+}
+.productlink{
+    text-decoration: none;
+    margin-left: 4vmax;
+}
+/* .background2{
+    background-color: rgb(94, 86, 86);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 27vh;
+    width: 74%;
+    margin: auto;
+    border-radius: 0.5vmax;
+    background-position: center;
+} */
+.allicon{
+    /* height: 40vh;
+    width: 15vw; */
+}
+.productsicon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vmax;
+    /* margin-left: 1vmax; */
+}
+.productcolor{
+    color: chartreuse;
+}
+
+.pagination{
+    margin-left: 47vmax;
+}
+.productname{
+    color: darkgreen;
+    margin-left: 5vmax;
+}
+.productborder{
+    /* border: 1px solid black; */
+    height: 420vh;
+    width: 78%;
+    margin-left: 20vmax;
+}
+.margintop{
+    margin-top: 9vmax;
+    display: flex;
+    flex-direction: row;
+}
+.categories{
+    height: 34vmax;
+    width: 18%;
+    margin-left: 1vmax;
+    border: 1px solid black;
+    position: fixed;
+    z-index: 800;
+
+}
+.divproducts{
+    margin-left: 1vmax;
+}
+.relatedproduct{
+    height: 28vmax;
+    width: 95%;
+    /* border: 2px solid black; */
+    background-color:rgb(236, 245, 250);
+    margin: auto;
+}
+.relatedproduct2{
+    margin-top: 10vmax;
+}
+.relateddeals{
+    font-weight: bolder;
+    margin-left: 2vmax;
+    margin-top: 2vmax;
+    font-size: 21px;
+}
+.prodlink{
+    margin-top: -2vmax;
+    color: darkgreen;
+    margin-left: 4vmax;   
+    text-align: justify; 
+    width: 40%;
+}
+.prodlink:hover{
+    background-color: rgb(173, 233, 173);;
+}
+.category123{
+    /* margin-right: 4vmax; */
+    background-color:   rgb(136, 233, 136);
+}
+.nqpproducts{
+    margin-top: 16vmax;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.pricequan{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vmax;
+    margin-left: 0.5vmax;
+    
+}
+.priceproducts{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.quantityproducts{
+    font-size: 12px;
+    font-weight: bold;
+}
+.nqp1{
+    margin-left: 1vmax;
+}
+.btncartproducts{
+    background-color: rgb(94, 224, 94);
+    margin-top: -0.3vmax;
+    margin-left: 1.5vmax;
+    font-size: 12px;
+    /* margin-right: 0.3vmax; */
+    border-radius: 0.5vmax;
+    font-weight: bold;
+    /* padding: -5vmax; */
+}
+.btncart:hover{
+    background-color: rgb(56, 153, 56);
+}

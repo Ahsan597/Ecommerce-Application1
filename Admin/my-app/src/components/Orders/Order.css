@@ -1,0 +1,33 @@
+.table {
+    position: absolute;
+    top: 20%;
+    height: 80vh;
+    width: 70vw;
+    margin-left: 25vmax;
+    background-color: rgb(243, 217, 138);
+    border: 1px solid rgb(241, 211, 119);
+    /* border: 1px solid palevioletred; */
+    /* margin-top: 5vmax;
+    margin-bottom: 5vmax; */
+}
+
+.orders {
+    /* border: 1px solid palevioletred; */
+
+}
+
+.head {
+    margin-left: 28vmax;
+    font-weight: bolder;
+}
+
+.h1 {
+    border-color: 1px solid aquamarine;
+    height: 8vh;
+}
+
+.paper {
+    position: fixed;
+    /* top: 0; */
+    /* left: 0; */
+}

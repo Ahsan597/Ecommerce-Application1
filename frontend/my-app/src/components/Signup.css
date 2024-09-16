@@ -1,0 +1,56 @@
+.margin-top{
+    margin-top: 4vmax;
+    /* height:100vh; */
+    background-image: url("../assets/accountpic.jpg");
+    background-repeat: no-repeat;
+}
+.accformheight{
+    height: 1vh;
+    margin-top: 9vmax;
+}
+.form{
+    margin-top: 8vmax;
+    margin-left: 52vmax;
+    text-align: center;
+    /* align-items: center; */
+    border: 2px solid black;
+    width: 30%;
+    height: 110vh;
+    border-top-left-radius: 4vmax;
+    border-top-right-radius: 4vmax;
+}
+.border{
+    /* border: 3px  black; */
+}
+.btn7{
+    border: 1px solid black;
+    margin-top: 2vmax; 
+    background-color: black;
+    padding:0.7vmax;
+    width: 7vmax;
+    color: white;
+    border-radius: 2vmax;
+}
+.mm{
+    margin-right: 6vmax;
+    margin-bottom: -1.8vmax;
+    padding: 0.6vmax;
+}
+.mmm{
+    margin-left: 2.5vmax;
+}
+.mmmm{
+    margin-left: 4vmax;
+}
+.btnsh{
+    position: absolute;
+    /* right: 29vmin; */
+    height: 5vh;
+    width:3vw;
+    left: 71.8vmax;
+}
+.createaccount{
+    margin-top: 3vmax;
+    margin-bottom: 2vmax;
+    color: olive;
+}

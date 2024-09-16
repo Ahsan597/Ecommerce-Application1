@@ -1,0 +1,227 @@
+.navbars2{
+    display: flex;
+    flex-direction: row;
+}
+.navbar{
+    background-color: black;
+    height: 10vh;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 32%;
+    height: 7.9vh;
+}
+.link22{
+    margin-left: 5vmax;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+}
+.link:hover{
+    color: white;
+    
+}
+.homeicon{
+    /* size: 4vmax; */
+    margin-bottom: 0.5vmax;
+}
+.round:hover{
+
+}
+.li{
+    list-style: none;
+    margin: 0vmax;
+    font-weight: bolder;
+}
+.li2{
+    /* margin-left: vmax; */
+    margin-top: -1vmax;
+}
+.li3{
+    margin-left: 2vmax;
+}
+.li:hover{
+
+}
+.ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vmax;
+}
+.ulnav2{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    margin-bottom: -1vmax;
+    margin-left: 1vmax;
+    height: 2.8vmax;
+    width: 8vw;
+    /* max-width: auto; */
+    font-size: 20px;
+    font-weight: bolder;
+    /* overflow:hidden; */
+}
+
+.btnsearch{
+ 
+    margin-top: 0.4vmax;
+}
+.btn2{
+    margin-left: -8vmax;
+    margin-top: -1.8vmax;
+}
+.btn33{
+    margin-left: 2vmax;
+    margin-top: -1.8vmax;
+}
+
+.inp{
+    margin-top: 0.4vmax;
+    /* margin-bottom: 2vmax; */
+    /* margin-left: 40vmax; */
+    width: 17vw;
+}
+.account{
+    margin-left: 5vmax;
+    margin-top: -1vmax;
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 23px;
+}
+.nav44{
+    height: 4vmax;
+    width: 100%;
+    background-color: rgb(91, 143, 23);
+    margin-top: 3.2vmax;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+}
+
+.icons{
+    /* margin-top: 60vmax; */
+}
+.account:hover{
+    color: lawngreen;
+}
+.storeicon{
+    margin-right: 1.5vmax;
+    color: lime;
+}
+.capitallink{
+    margin-right: 1vmax;
+    /* margin-top: 4vmax; */
+}
+.d-flex{
+    /* margin-top: -4.5vmax; */
+}
+.formbody{
+    width: 55%;
+}
+.marginform{
+    width: 25%;
+    /* margin-left: 5vmax; */
+    margin-top: -0.5vmax;
+}
+.acc{
+    margin-left: 10vmax;
+}
+
+.ancc{
+    margin-left: 9vmax;
+}
+.acctt{
+    margin-left: 10vmax;
+}
+.accountcart{
+    margin-left: 28.7vmax;
+}
+.dropdown{
+    margin-top: -1.5vmax;
+    margin-right: 5vmax;
+    width: 5%;
+}
+.per1{
+    color: white;
+}
+.per1:hover{
+    color: lime;
+}
+.marginsign{
+    width: 24%;
+}
+.linav2{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 1vmax;
+}
+
+
+
+
+@media (max-width: 750px) {
+    .btn {
+        font-size: 8px;
+        /* margin-top: 3vmax; */
+    }
+    .li3{
+        margin-top: 0.5vmax;
+    }
+    .li{
+        font-size: 10px;
+    }
+    .marginform{
+        margin-top: -1.5vmax;
+        padding: -2vmax;
+    }
+    .inp{
+        /* padding: 0px 0px ; */
+        /* height: -1vh; */
+        /* margin: 1vmax; */
+    }
+    .btn2{
+        margin-top: -3.2vmax;
+        margin-left: -8vmax;
+        padding: 1px 4px ;
+    }
+    .btn33{
+        margin-top: -3.2vmax;
+        padding: 0.2px 0.2px ;
+    }
+    .btnsearch{
+        /* margin-top: 2vmax; */
+    }
+    .licapital{
+        margin: 0vmax;
+    }
+    .ul{
+        margin-left: 0vmax;
+    }
+    .nav44{
+        margin-top: 6vmax;
+        height: 12vh;
+    }
+    .linav2{
+       margin-top: 1.8vmax;
+    }
+    .li2nav2{
+        margin-left: -7vmax;
+    }
+    .nav44{
+        margin-top: 5vmax;
+    }
+    }
+@media(max-width: 570px){
+
+}    

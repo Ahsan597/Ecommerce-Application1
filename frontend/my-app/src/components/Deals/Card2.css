@@ -1,0 +1,82 @@
+.dailydeals{
+    /* border-top-left-radius: 3vmax; */
+    height: 400vh;
+    width: 95%;
+    /* border: 1px solid black; */
+    margin-left: 2vmax;
+}
+.producticon22{
+    margin-left: 7vmax;
+}
+/* .weeklydeals{
+    border-top-right-radius: 3vmax;
+    height: 400vh;
+    width: 45%;
+    border: 1px solid black;
+} */
+.dealsmid{
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 4vmax;
+    margin-left: 1vmax;
+}
+/* .category{
+    border: 1px solid black;
+    width: 100%;
+    margin-top: -6.95vmax;
+    height: 40vmax;
+} */
+.dailyweek{
+    margin-left: 10vmax;
+    margin-top: 1vmax;
+    margin-bottom: 4vmax;
+}
+.productcolor1{
+    color: rgb(241, 142, 158);
+}
+.dealscol{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vmax;
+}
+.carddeal222{
+    height: 50vh;
+    width:23vw;
+    margin-left: 0.8vmax;
+    border: 1px solid black;
+}
+.relateddeals{
+    margin-bottom: -73vmax;
+    margin-top: 9vmax;
+}
+.pagination2{
+    margin-left: 46vmax;
+}
+
+.nqp5{
+    margin-top: 14.4vmax;
+    font-weight: bolder;
+    font-size: 16px;
+}
+.pricequan5{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vmax;
+    margin-left: 0.5vmax;
+    font-size: 10px;
+}
+.nqp15{
+    margin-left: 1vmax;
+}
+.btncart5{
+    background-color: rgb(94, 224, 94);
+    margin-top: -0.3vmax;
+    margin-left: 1.5vmax;
+    /* margin-right: 0.3vmax; */
+    border-radius: 0.5vmax;
+    /* padding: -5vmax; */
+}
+.btncart5:hover{
+    background-color: rgb(56, 153, 56);
+}
