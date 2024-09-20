@@ -8,7 +8,6 @@ import './Signin.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-// import { TableBody } from '@material-ui/core';
 import Useraccount from './Useraccount';
 import { Redirect } from "react-router";
 import Visibility from '@mui/icons-material/Visibility';
@@ -21,12 +20,8 @@ export default function Signin(props) {
     const [passerror, setPasserror] = useState(false);
     const [loger, setLoger] = useState("");
     const [emailerror, setEmailerror] = useState(false);
-    // const [notmatched, setNotmatched] = useState(false);
-    // const [emailerror3, setEmailerror3] = useState("email or password is in-valid");
     const [helperText2, setHelperText2] = useState();
     const [helperText3, setHelperText3] = useState();
-
-
     const { setIsAuthenticated } = useContext(AuthContext);
 
     const navigate = useNavigate();
@@ -36,8 +31,6 @@ export default function Signin(props) {
             pass: pass
         })
             .then(response => {
-                // console.log("response.status: ", response.status, typeof response.status);
-                // navigate("/");
                 if (response.data.token) {
                     localStorage.setItem('token', response.data.token);
                     setIsAuthenticated(true);

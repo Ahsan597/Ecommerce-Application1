@@ -23,38 +23,38 @@ export default function Checkoutform() {
     }),
     onSubmit: (values) => {
       try {
-        const response = axios.post(`http://localhost:4200/customers/postcus`, values); 
+        const response = axios.post(`http://localhost:4200/customers/postcus`, values);
         console.log('Response from server:', response.data);
 
       } catch (error) {
-        console.log("error submitting checkout form",error);
+        console.log("error submitting checkout form", error);
 
       }
-  
+
       // values.productItems = newProductItem;
       // addCustomerDetails(values);
     },
   });
 
   // const addCustomerDetails = async (values) => {
-    // const formData = new FormData();
-    // formData.append('customerName', values.customerName);
-    // formData.append('customerPhno', values.customerPhno);
-    // formData.append('customerGmail', values.customerGmail);
-    // formData.append('customerAddress', values.customerAddress);
+  // const formData = new FormData();
+  // formData.append('customerName', values.customerName);
+  // formData.append('customerPhno', values.customerPhno);
+  // formData.append('customerGmail', values.customerGmail);
+  // formData.append('customerAddress', values.customerAddress);
 
-    // try {
-    //   axios.post(`http://localhost:4200/customers/postcus`, formData); 
-    
-    // } catch (error) {
-    //   console.log(error);
-    // }
+  // try {
+  //   axios.post(`http://localhost:4200/customers/postcus`, formData); 
+
+  // } catch (error) {
+  //   console.log(error);
+  // }
   // };
 
 
   return (
     <div style={{ marginTop: "9vmax" }}>
-      <form  onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit}>
         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
           <TextField
             error={formik.touched.customerName && Boolean(formik.errors.customerName)}

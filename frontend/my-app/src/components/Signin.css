@@ -1,7 +1,6 @@
 .formsign{
     margin-left: 57vmax;
     text-align: center;
-    /* align-items: center; */
     border: 2px solid black;
     width: 30%;
     height: 64vh;
@@ -18,21 +17,14 @@
     background-image: url("../assets/accountpic.jpg");
     background-repeat: no-repeat;
     height: 100vh;
-    /* margin-top: -7vmax; */
 }
 .text8{
     margin-bottom: -1.7vmax;
     margin-right: 1.8vmax;
 }
 .loginerror{
-    /* margin-left: 63.5vmax;
-    margin-top: 12vmax; */
-    /* margin: auto; */
-    /* justify-content: center;
-    align-items: center; */
     color: red;
     font-weight: bolder;
-    /* width: 15%; */
 }
 .newaccl{
     text-decoration: none;

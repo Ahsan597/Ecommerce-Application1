@@ -9,7 +9,6 @@
 .brandtop{
     border-top-right-radius: 14vmax;
     border-top-left-radius: 14vmax;
-    /* border: 1px solid black; */
     height: 460vh;
     width: 98%;
     margin-top: 7vmax;
@@ -46,14 +45,9 @@
 .btncart1{
     background-color: rgb(94, 224, 94);
     margin-top: -0.3vmax;
-    /* margin-left: 1.5vmax; */
     margin-right: 0.3vmax;
     border-radius: 0.5vmax;
-    /* padding: -5vmax; */
 }
 .btncart:hover{
     background-color: rgb(56, 153, 56);
 }
-/* .pagination456{
-    margin-left: 36vmax;
-} */

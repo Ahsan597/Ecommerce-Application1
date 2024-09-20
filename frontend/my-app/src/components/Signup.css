@@ -1,6 +1,5 @@
 .margin-top{
     margin-top: 4vmax;
-    /* height:100vh; */
     background-image: url("../assets/accountpic.jpg");
     background-repeat: no-repeat;
 }
@@ -12,15 +11,11 @@
     margin-top: 8vmax;
     margin-left: 52vmax;
     text-align: center;
-    /* align-items: center; */
     border: 2px solid black;
     width: 30%;
     height: 110vh;
     border-top-left-radius: 4vmax;
     border-top-right-radius: 4vmax;
-}
-.border{
-    /* border: 3px  black; */
 }
 .btn7{
     border: 1px solid black;

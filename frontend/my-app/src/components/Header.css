@@ -30,7 +30,6 @@
     
 }
 .homeicon{
-    /* size: 4vmax; */
     margin-bottom: 0.5vmax;
 }
 .round:hover{
@@ -42,7 +41,6 @@
     font-weight: bolder;
 }
 .li2{
-    /* margin-left: vmax; */
     margin-top: -1vmax;
 }
 .li3{
@@ -65,10 +63,8 @@
     margin-left: 1vmax;
     height: 2.8vmax;
     width: 8vw;
-    /* max-width: auto; */
     font-size: 20px;
     font-weight: bolder;
-    /* overflow:hidden; */
 }
 
 .btnsearch{
@@ -86,8 +82,6 @@
 
 .inp{
     margin-top: 0.4vmax;
-    /* margin-bottom: 2vmax; */
-    /* margin-left: 40vmax; */
     width: 17vw;
 }
 .account{
@@ -108,10 +102,6 @@
     left: 0;
     z-index: 900;
 }
-
-.icons{
-    /* margin-top: 60vmax; */
-}
 .account:hover{
     color: lawngreen;
 }
@@ -121,17 +111,12 @@
 }
 .capitallink{
     margin-right: 1vmax;
-    /* margin-top: 4vmax; */
-}
-.d-flex{
-    /* margin-top: -4.5vmax; */
 }
 .formbody{
     width: 55%;
 }
 .marginform{
     width: 25%;
-    /* margin-left: 5vmax; */
     margin-top: -0.5vmax;
 }
 .acc{
@@ -185,11 +170,6 @@
         margin-top: -1.5vmax;
         padding: -2vmax;
     }
-    .inp{
-        /* padding: 0px 0px ; */
-        /* height: -1vh; */
-        /* margin: 1vmax; */
-    }
     .btn2{
         margin-top: -3.2vmax;
         margin-left: -8vmax;
@@ -198,9 +178,6 @@
     .btn33{
         margin-top: -3.2vmax;
         padding: 0.2px 0.2px ;
-    }
-    .btnsearch{
-        /* margin-top: 2vmax; */
     }
     .licapital{
         margin: 0vmax;

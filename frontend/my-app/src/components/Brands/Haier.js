@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
 import "./Card3.css"
-import {Grid, Card, CardContent, Typography,CardHeader} from '@mui/material'
+import {Grid, Card} from '@mui/material'
 export default function Haier() {
     const [data, setData] =useState([1,3,3,3,3,3,3,2,9,9,9,9,9,9,9,8,8,8,8,8,8,9,8,8,8,8,8,8,8,8,8,8])
     return (
         <div>
-            {/* <div className="brandback">
-            </div> */}
             <div className="brandtop">
                 <h1 className="brandname brandname1">Haier</h1>
                 <div className="marginbox">

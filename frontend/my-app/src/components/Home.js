@@ -21,7 +21,6 @@ const style = {
 // const ITEMS_PER_PAGE = 6;
 
 export default function Home() {
-    // const [data, setData] = useState([1, 8, 8, 1])
     const { id } = useParams();
     const [data2, setData2] = useState([8, 8, 8, 8])
     const [products, setProducts] = useState([]);
@@ -29,9 +28,6 @@ export default function Home() {
     const [totalPages, setTotalPages] = useState(1);
     const [product, setProduct] = React.useState({});
     const [productPrice2, setProductPrice2] = useState();
-    // const [open, setOpen] = React.useState(false);
-    // const handleOpen = () => setOpen(true);
-    // const handleClose = () => setOpen(false);
     const { addToCart } = useContext(CartContext);
     const [quantity, setQuantity] = useState(1); // Default quantity set to 1
     const [totalPrice, setTotalPrice] = useState(productPrice2); // Initial total price
@@ -54,25 +50,10 @@ export default function Home() {
                 throw new Error('Network response was not ok');
             }
             const data = await response.json();
-            // setProducts(data.products); // Assume the data has a `products` field
             setProducts(data?.products)
             console.log(data)
             setTotalPages(Math.ceil(data.total / 5)); 
             setProductPrice2(data.products)
-            // Assuming the price comes with the product data
-            // if (data.products.length > 0) {
-            //     setProductPrice2(data.products[0].price); // Example: Set price of the first product
-            // }
-                // .then(res => res.json())
-                // .then(data => {
-                //     console.log(data)
-                    // setProducts(data?.data1)
-                //     setProductPrice2(data.data1)
-                //     console.log("productsprice", data.data1)
-                // })
-                // .catch(err => {
-                //     console.error('Error fetching products:', err);
-                // });
             } catch (error) {
                 console.error('Error fetching products:', error);
             }
@@ -84,8 +65,6 @@ export default function Home() {
     return (
         <div>
             <div>
-                {/* <div className="background">
-                </div> */}
                 <div className="back2">
                     <div><h1 className="homeheader">Save your time</h1>
                         <h1 className="homeheader homeheader2"> Buy from Capital Store</h1>

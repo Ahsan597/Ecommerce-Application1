@@ -41,9 +41,6 @@ export default function Signup({onLogin}) {
             pass
         })
             .then(response => { 
-                // console.log(response)
-                // console.log('Signup successful:', response.data);
-                // Redirect the user to the home page after successful signup
                 if (response.data.token) {
                     localStorage.setItem('token', response.data.token);
                     setIsAuthenticated(true);
