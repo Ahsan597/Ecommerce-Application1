@@ -1,18 +1,15 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
-
 const User = require("../Model/User.js");
-// const { default: Signup } = require("../../frontend/my-app/src/components/Signup.js");
-// const { default: Signup } = require("../../front/frontsales/src/components/Signup.js");
-
 const jwt = require('jsonwebtoken');
+const secretKey = 'your_secret_key';
 
 router.get('/getsignup', getsignupid)
 router.post('/postsignup', postsignup)
 router.post('/postsignin', postsignin)
 
-const secretKey = 'your_secret_key';
+
 
 async function getsignupid(req, res) {
   try {
@@ -38,13 +35,10 @@ async function getsignup(req, res) {
 async function postsignup(req, res) {
   try {
     let user = {};
-
     user.name = req.body.name,
     user.name1 = req.body.name1,
     user.pass = req.body.pass,
-    user.email = req.body.email
-
-   
+    user.email = req.body.email   
     let data = new User(user);
     const token = jwt.sign({ id: data.id, email: data.email }, secretKey);
     res.json({ token });
@@ -59,6 +53,7 @@ async function postsignup(req, res) {
     res.send("am out of route")
   }
 };
+
 async function postsignin(req, res) {
   try {
     const body = req.body
@@ -75,4 +70,5 @@ async function postsignin(req, res) {
     res.send({ message: "am out of a route" })
   }
 }
+
 module.exports = router;

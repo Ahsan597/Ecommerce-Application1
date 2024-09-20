@@ -22,80 +22,15 @@
     font-weight: bolder;
 
 }
-.link:hover{
-    /* color: rgb(62, 252, 37); */
-    /* height: 4vmax;
-    width: 8vw; */
-    
-}
-.round:hover{
-
-}
 .li{
     list-style: none;
     padding: 10px;
     font-weight: bolder;
 }
-.li2{
-    /* margin-left: vmax; */
-    /* margin-top: -1vmax; */
-}
-/* .li3{
-    margin-left: 3vmax;
-}
-.li:hover{
-
-} */
 .ul{
     display: flex;
     flex-direction: row;
     margin-left: 5vmax;
-}
-/* .btn{
-    margin-top: -0.1vmax;
-    margin-bottom: -1vmax;
-    margin-left: 1vmax;
-    margin-right: 0vmax;
-    height: 4vmax;
-    width: 8vw;
-    font-weight: bolder;
-} */
-
-
-/* .btn2{
-    margin-left: 6vmax;
-}
-.btn33{
-    margin-left: 2vmax;
-} */
-
-/* .inp{
-    margin-top: 0.4vmax;
-    /* margin-bottom: 2vmax; */
-    /* margin-left: 40vmax; */
-    /* width: 17vw; */
-/* }  */
-/* .account{
-    margin-left: 5vmax;
-    margin-top: 5vmax;
-    color: black;
-    font-weight: bolder;
-    text-decoration: none;
-    font-size: 23px;
-    /* border: 2px solid rgb(11, 15, 11); */
-/* }  */
-/* .nav44{
-    height: 3vmax;
-    width: 100%;
-    margin-top: -0.2vmax;
-    background-color: rgb(91, 143, 23);
-} */
-
-.icons{
-    /* margin-top: 60vmax; */
-}
-.account:hover{
-    /* color: lawngreen; */
 }
 .storeicon{
     margin-right: 1.5vmax;
@@ -104,24 +39,3 @@
 .capitallink{
     margin-right: 3vmax;
 }
-/* .d-flex{ */
-    /* margin-top: -4.5vmax; */
-/* } */
-/* .formbody{
-    width: 55%;
-} */
-/* .marginform{
-    width: 60%;
-    margin-left: 40vmax;
-    margin-top: -5.8vmax;
-}
-.acc{
-    margin-left: 10vmax;
-}
-
-.ancc{
-    margin-left: 9vmax;
-}
-.acctt{
-    margin-left: 10vmax;
-} */

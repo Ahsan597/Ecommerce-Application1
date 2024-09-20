@@ -1,7 +1,5 @@
 const express = require("express");
 const router = express.Router();
-// const mongoose = require("mongoose");
-
 const Customer = require("../Model/Customer.js")
 
 router.get('/getcus',getcus)

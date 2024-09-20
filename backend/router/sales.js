@@ -1,14 +1,11 @@
 const express = require("express");
 const router = express.Router();
-
 const Sales = require("../Model/Sales")
 
-
-// router.get('/', async(req, res) => {res.send('sales working')}
 router.get('/get', gethandle)
 router.get('/getid', getidhandle)
 router.post('/post', posthandle)
-router.put('/up',updatehandle)
+router.put('/up', updatehandle)
 router.delete('/deleteid', delteidhandle)
 
 async function gethandle(req, res) {
@@ -25,19 +22,20 @@ async function gethandle(req, res) {
 async function getidhandle(req, res) {
     try {
         console.log("get working")
-        let data1 = await Sales.find({_id: req.query.id})
+        let data1 = await Sales.find({ _id: req.query.id })
         console.log(data1)
         res.status(300).send({ data1: data1 })
     } catch (error) {
         res.status(300).send("am out of route")
     }
 };
+
 async function posthandle(req, res) {
     try {
         let data2 = {};
         data2.salesamount = req.body.salesamount,
-        data2.salesaverage = req.body.salesaverage,
-        data2.salesrating = req.body.salesrating
+            data2.salesaverage = req.body.salesaverage,
+            data2.salesrating = req.body.salesrating
 
         let data1 = await Sales.find()
         let resp = new Sales(data2)
@@ -78,4 +76,5 @@ async function delteidhandle(req, res) {
         res.status(300).send("am out of route")
     }
 };
+
 module.exports = router;

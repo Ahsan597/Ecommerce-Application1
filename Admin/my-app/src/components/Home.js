@@ -1,10 +1,8 @@
 import React from 'react';
 import "./Home.css";
 import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
 
 export default function Home() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,10 +31,10 @@ export default function Home() {
               'aria-labelledby': 'basic-button',
             }}
           >
-            <MenuItem onClick={handleClose}  ><Link to="/addproduct" style={{textDecoration: "none", color:"black"}}>Add Product</Link></MenuItem>
-            <MenuItem onClick={handleClose}><Link to="allproducts" style={{textDecoration: "none", color:"black"}}>All Products</Link></MenuItem>
-            <MenuItem onClick={handleClose}><Link to="brands" style={{textDecoration: "none", color:"black"}}>Brands</Link></MenuItem>
-            <MenuItem onClick={handleClose}><Link to="deals" style={{textDecoration: "none", color:"black"}}>Deals</Link></MenuItem>
+            <MenuItem onClick={handleClose}  ><Link to="/addproduct" style={{ textDecoration: "none", color: "black" }}>Add Product</Link></MenuItem>
+            <MenuItem onClick={handleClose}><Link to="allproducts" style={{ textDecoration: "none", color: "black" }}>All Products</Link></MenuItem>
+            <MenuItem onClick={handleClose}><Link to="brands" style={{ textDecoration: "none", color: "black" }}>Brands</Link></MenuItem>
+            <MenuItem onClick={handleClose}><Link to="deals" style={{ textDecoration: "none", color: "black" }}>Deals</Link></MenuItem>
           </Menu>
           <li className='li'><Link to="/order" className='li'>Orders</Link></li>
           <li className='li'><Link to="/sales" className='li'>Sales</Link></li>

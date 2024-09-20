@@ -1,6 +1,5 @@
 const express = require('express');
 const Cart = require('../Model/Cart.js');
-
 const router = express.Router();
 
 // Get cart by user ID

@@ -10,12 +10,6 @@ let CustomerSchema = mongoose.Schema({
     customerGmail:{
         type: String
     },
-    // customerproduct:{
-    //     type:String
-    // },
-    // customerbill:{
-    //     type:String
-    // },
     customerAddress:{
         type:String
     }
