@@ -1,36 +1,36 @@
 import './App.css';
-import Home from "./components/Home"
+import Home from "./pages/Home"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Signin from "./components/Signin"
-import Signup from "./components/Signup"
-import Useraccount from "./components/Useraccount"
-import Deals from './components/Deals/Deals';
+import Signin from "./pages/Signin"
+import Signup from "./pages/Signup"
+import Useraccount from "./pages/Useraccount"
+import Deals from './pages/deals/Deals';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import Product from './components/Product';
-import Devices from './components/Products/Devices';
-import Furniture from './components/Products/Furniture';
-import Tools from './components/Products/Tools';
-import Child from './components/Products/Child';
-import Phone from './components/Products/Phone';
-import Toys from './components/Products/Toys';
-import Sports from './components/Products/Sports';
-import Health from './components/Products/Health';
-import Dchild from './components/Deals/Dchild';
-import Ddevices from './components/Deals/Ddevices';
-import Dphone from './components/Deals/Dphone';
-import Dsports from './components/Deals/Dsports';
-import Dtoys from './components/Deals/Dtoys';
-import Haier from './components/Brands/Haier';
-import Bonanza from './components/Brands/Bonanza';
-import Nike from './components/Brands/Nike';
+import Product from './pages/Product';
+import Devices from './pages/products/Devices';
+import Furniture from './pages/products/Furniture';
+import Tools from './pages/products/Tools';
+import Child from './pages/products/Child';
+import Phone from './pages/products/Phone';
+import Toys from './pages/products/Toys';
+import Sports from './pages/products/Sports';
+import Health from './pages/products/Health';
+import Dchild from './pages/deals/Dchild';
+import Ddevices from './pages/deals/Ddevices';
+import Dphone from './pages/deals/Dphone';
+import Dsports from './pages/deals/Dsports';
+import Dtoys from './pages/deals/Dtoys';
+import Haier from './pages/brands/Haier';
+import Bonanza from './pages/brands/Bonanza';
+import Nike from './pages/brands/Nike';
 import Addtocart from './components/Addtocart/Addtocart';
-import { AuthProvider } from './components/context/AuthContext';
-import { CartProvider } from './components/context/CartContext';
+import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import Checkoutform from './components/Addtocart/Checkoutform';
 
 function App() {

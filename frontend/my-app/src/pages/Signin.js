@@ -11,7 +11,7 @@ import TextField from '@mui/material/TextField';
 import Useraccount from './Useraccount';
 import { Redirect } from "react-router";
 import Visibility from '@mui/icons-material/Visibility';
-import { AuthContext } from './context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 export default function Signin(props) {
     const [email, setEmail] = useState("");

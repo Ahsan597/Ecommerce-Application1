@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 const Addtocart = () => {

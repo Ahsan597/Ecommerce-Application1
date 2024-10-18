@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import './Signup.css'
 import axios from 'axios';
 import TextField from '@mui/material/TextField';
-import { AuthContext } from './context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 
 export default function Signup({onLogin}) {
     const [name, setName] = useState("");

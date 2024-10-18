@@ -5,12 +5,12 @@ import {
   Route
 } from "react-router-dom";
 import Header from './components/Header';
-import Home from './components/Home';
-import Product from './components/Products/Product';
-import Order from './components/Orders/Order';
-import Sales from './components/sales/Sales';
-import Allproducts from './components/Products/Allproducts';
-import Updateproduct from './components/Products/Updateproduct';
+import Home from './pages/Home';
+import Product from './pages/products/Product';
+import Order from './pages/orders/Order';
+import Sales from './pages/sales/Sales';
+import Allproducts from './pages/products/Allproducts';
+import Updateproduct from './pages/products/Updateproduct';
 
 
 function App() {

@@ -4,7 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Person4Icon from "@mui/icons-material/Person4";
 import "./Header.css";
-import { AuthContext } from './context/AuthContext';
+import { AuthContext } from '../context/AuthContext';
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 

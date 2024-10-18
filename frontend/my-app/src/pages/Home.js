@@ -1,11 +1,10 @@
 import React, { useContext,useState, useEffect } from 'react';
-import store2 from "./../assets/store2.jpg"
 import { Grid, Card } from '@mui/material'
 import "./Home.css";
 import { useParams } from 'react-router-dom';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { CartContext } from './context/CartContext.js';
+import { CartContext } from '../context/CartContext';
 
 const style = {
     position: 'absolute',
